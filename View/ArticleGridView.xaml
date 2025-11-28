@@ -69,9 +69,44 @@
         <DataGrid
             Grid.Row="1"
             AutoGenerateColumns="False"
-            ItemsSource="{Binding Quotations}">
+            GridLinesVisibility="All"
+            HeadersVisibility="Column"
+            IsReadOnly="True"
+            ItemsSource="{Binding Articles}"
+            SelectionMode="Single">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Id}" Header="Id" />
+                <DataGridTextColumn
+                    Width="60"
+                    Binding="{Binding Id}"
+                    Header="ID" />
+                <DataGridTextColumn
+                    Width="120"
+                    Binding="{Binding Name}"
+                    Header="物料编码" />
+                <DataGridTextColumn
+                    Width="100"
+                    Binding="{Binding Price, StringFormat='{}{0:F2}'}"
+                    Header="单价" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding MinimumPrice}"
+                    Header="描述" />
+                <DataGridTextColumn
+                    Width="80"
+                    Binding="{Binding Description}"
+                    Header="单位" />
+                <DataGridTextColumn
+                    Width="60"
+                    Binding="{Binding Specification}"
+                    Header="启用" />
+                <DataGridTextColumn
+                    Width="60"
+                    Binding="{Binding Discount}"
+                    Header="启用" />
+                <DataGridTextColumn
+                    Width="60"
+                    Binding="{Binding Note}"
+                    Header="启用" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

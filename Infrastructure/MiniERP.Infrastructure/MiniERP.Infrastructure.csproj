@@ -20,4 +20,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\MiniERP.Domain\MiniERP.Domain.csproj" />
+    <ProjectReference Include="..\..\Application\MiniERP.Application\MiniERP.ApplicationLayer.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -20,6 +20,13 @@
     <None Remove="Assets\order.png" />
     <None Remove="Assets\packing-list.png" />
     <None Remove="Assets\quotation.png" />
+    <None Remove="erp.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="erp.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +42,15 @@
     <Resource Include="Assets\article.png" />
     <Resource Include="Assets\customer.png" />
     <Resource Include="Assets\order.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Application\MiniERP.Application\MiniERP.ApplicationLayer.csproj" />
+    <ProjectReference Include="Infrastructure\MiniERP.Infrastructure\MiniERP.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
